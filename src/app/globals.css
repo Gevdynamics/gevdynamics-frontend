@@ -1,0 +1,285 @@
+@import "tailwindcss";
+
+/*
+ * G.E.V. Dynamics — MD3 Design Tokens
+ *
+ * Brand identity: Clean, technical, aerospace. Precision engineering
+ * for adaptive altitude ground effect vehicles.
+ *
+ * Primary:   Aerospace Blue (#2B5E91) — authoritative, sky/ocean,
+ *            evokes aerospace engineering and maritime operation.
+ * Secondary: Titanium (#5B6573) — engineering precision, advanced
+ *            materials, structural integrity.
+ * Tertiary:  Hydrogen Teal (#39796B) — hydrogen fuel, clean energy,
+ *            environmental innovation.
+ * Error:     Standard MD3 red family.
+ *
+ * All foreground/background pairings meet WCAG AA (4.5:1 for normal text,
+ * 3:1 for large text and UI components).
+ */
+
+/* ================================================================
+   Light Mode
+   ================================================================ */
+:root {
+  /* Primary — Aerospace Blue */
+  --md-primary: #2B5E91;
+  --md-on-primary: #FFFFFF;
+  --md-primary-container: #D2E4FF;
+  --md-on-primary-container: #001C37;
+  --md-primary-fixed: #D2E4FF;
+  --md-primary-fixed-dim: #A1C9F8;
+  --md-on-primary-fixed: #001C37;
+  --md-on-primary-fixed-variant: #0E4578;
+
+  /* Secondary — Titanium */
+  --md-secondary: #5B6573;
+  --md-on-secondary: #FFFFFF;
+  --md-secondary-container: #DFE3ED;
+  --md-on-secondary-container: #181C23;
+  --md-secondary-fixed: #DFE3ED;
+  --md-secondary-fixed-dim: #C3C7D1;
+  --md-on-secondary-fixed: #181C23;
+  --md-on-secondary-fixed-variant: #434B58;
+
+  /* Tertiary — Hydrogen Teal */
+  --md-tertiary: #39796B;
+  --md-on-tertiary: #FFFFFF;
+  --md-tertiary-container: #BCF5E6;
+  --md-on-tertiary-container: #002019;
+  --md-tertiary-fixed: #BCF5E6;
+  --md-tertiary-fixed-dim: #A0D9CA;
+  --md-on-tertiary-fixed: #002019;
+  --md-on-tertiary-fixed-variant: #1F6053;
+
+  /* Error */
+  --md-error: #BA1A1A;
+  --md-on-error: #FFFFFF;
+  --md-error-container: #FFDAD6;
+  --md-on-error-container: #410002;
+
+  /* Surface */
+  --md-surface: #FAFBFF;
+  --md-surface-dim: #DAD9E0;
+  --md-surface-bright: #FAFBFF;
+  --md-on-surface: #191C20;
+  --md-on-surface-variant: #43474E;
+  --md-surface-container-lowest: #FFFFFF;
+  --md-surface-container-low: #F4F3FA;
+  --md-surface-container: #EEEDF4;
+  --md-surface-container-high: #E8E8EF;
+  --md-surface-container-highest: #E2E2E9;
+  --md-surface-tint: #2B5E91;
+
+  /* Outline */
+  --md-outline: #73777F;
+  --md-outline-variant: #C3C6CF;
+
+  /* Inverse */
+  --md-inverse-surface: #2E3036;
+  --md-inverse-on-surface: #F0F0F7;
+  --md-inverse-primary: #A1C9F8;
+
+  /* Scrim & Shadow */
+  --md-scrim: #000000;
+  --md-shadow: #000000;
+}
+
+/* ================================================================
+   Dark Mode
+   ================================================================ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Primary — Aerospace Blue */
+    --md-primary: #A1C9F8;
+    --md-on-primary: #003259;
+    --md-primary-container: #0E4578;
+    --md-on-primary-container: #D2E4FF;
+    --md-primary-fixed: #D2E4FF;
+    --md-primary-fixed-dim: #A1C9F8;
+    --md-on-primary-fixed: #001C37;
+    --md-on-primary-fixed-variant: #0E4578;
+
+    /* Secondary — Titanium */
+    --md-secondary: #C3C7D1;
+    --md-on-secondary: #2D3340;
+    --md-secondary-container: #434B58;
+    --md-on-secondary-container: #DFE3ED;
+    --md-secondary-fixed: #DFE3ED;
+    --md-secondary-fixed-dim: #C3C7D1;
+    --md-on-secondary-fixed: #181C23;
+    --md-on-secondary-fixed-variant: #434B58;
+
+    /* Tertiary — Hydrogen Teal */
+    --md-tertiary: #A0D9CA;
+    --md-on-tertiary: #05372E;
+    --md-tertiary-container: #1F6053;
+    --md-on-tertiary-container: #BCF5E6;
+    --md-tertiary-fixed: #BCF5E6;
+    --md-tertiary-fixed-dim: #A0D9CA;
+    --md-on-tertiary-fixed: #002019;
+    --md-on-tertiary-fixed-variant: #1F6053;
+
+    /* Error */
+    --md-error: #FFB4AB;
+    --md-on-error: #690005;
+    --md-error-container: #93000A;
+    --md-on-error-container: #FFDAD6;
+
+    /* Surface */
+    --md-surface: #111318;
+    --md-surface-dim: #111318;
+    --md-surface-bright: #37393E;
+    --md-on-surface: #E2E2E9;
+    --md-on-surface-variant: #C3C6CF;
+    --md-surface-container-lowest: #0C0E13;
+    --md-surface-container-low: #191C20;
+    --md-surface-container: #1D2024;
+    --md-surface-container-high: #282A2F;
+    --md-surface-container-highest: #33353A;
+    --md-surface-tint: #A1C9F8;
+
+    /* Outline */
+    --md-outline: #8D9199;
+    --md-outline-variant: #43474E;
+
+    /* Inverse */
+    --md-inverse-surface: #E2E2E9;
+    --md-inverse-on-surface: #2E3036;
+    --md-inverse-primary: #2B5E91;
+
+    /* Scrim & Shadow */
+    --md-scrim: #000000;
+    --md-shadow: #000000;
+  }
+}
+
+/* ================================================================
+   Tailwind v4 Theme Tokens
+   Maps CSS custom properties to Tailwind utility classes.
+   Usage: bg-md-primary, text-md-on-surface, border-md-outline, etc.
+   ================================================================ */
+@theme inline {
+  /* Primary */
+  --color-md-primary: var(--md-primary);
+  --color-md-on-primary: var(--md-on-primary);
+  --color-md-primary-container: var(--md-primary-container);
+  --color-md-on-primary-container: var(--md-on-primary-container);
+  --color-md-primary-fixed: var(--md-primary-fixed);
+  --color-md-primary-fixed-dim: var(--md-primary-fixed-dim);
+  --color-md-on-primary-fixed: var(--md-on-primary-fixed);
+  --color-md-on-primary-fixed-variant: var(--md-on-primary-fixed-variant);
+
+  /* Secondary */
+  --color-md-secondary: var(--md-secondary);
+  --color-md-on-secondary: var(--md-on-secondary);
+  --color-md-secondary-container: var(--md-secondary-container);
+  --color-md-on-secondary-container: var(--md-on-secondary-container);
+  --color-md-secondary-fixed: var(--md-secondary-fixed);
+  --color-md-secondary-fixed-dim: var(--md-secondary-fixed-dim);
+  --color-md-on-secondary-fixed: var(--md-on-secondary-fixed);
+  --color-md-on-secondary-fixed-variant: var(--md-on-secondary-fixed-variant);
+
+  /* Tertiary */
+  --color-md-tertiary: var(--md-tertiary);
+  --color-md-on-tertiary: var(--md-on-tertiary);
+  --color-md-tertiary-container: var(--md-tertiary-container);
+  --color-md-on-tertiary-container: var(--md-on-tertiary-container);
+  --color-md-tertiary-fixed: var(--md-tertiary-fixed);
+  --color-md-tertiary-fixed-dim: var(--md-tertiary-fixed-dim);
+  --color-md-on-tertiary-fixed: var(--md-on-tertiary-fixed);
+  --color-md-on-tertiary-fixed-variant: var(--md-on-tertiary-fixed-variant);
+
+  /* Error */
+  --color-md-error: var(--md-error);
+  --color-md-on-error: var(--md-on-error);
+  --color-md-error-container: var(--md-error-container);
+  --color-md-on-error-container: var(--md-on-error-container);
+
+  /* Surface */
+  --color-md-surface: var(--md-surface);
+  --color-md-surface-dim: var(--md-surface-dim);
+  --color-md-surface-bright: var(--md-surface-bright);
+  --color-md-on-surface: var(--md-on-surface);
+  --color-md-on-surface-variant: var(--md-on-surface-variant);
+  --color-md-surface-container-lowest: var(--md-surface-container-lowest);
+  --color-md-surface-container-low: var(--md-surface-container-low);
+  --color-md-surface-container: var(--md-surface-container);
+  --color-md-surface-container-high: var(--md-surface-container-high);
+  --color-md-surface-container-highest: var(--md-surface-container-highest);
+  --color-md-surface-tint: var(--md-surface-tint);
+
+  /* Outline */
+  --color-md-outline: var(--md-outline);
+  --color-md-outline-variant: var(--md-outline-variant);
+
+  /* Inverse */
+  --color-md-inverse-surface: var(--md-inverse-surface);
+  --color-md-inverse-on-surface: var(--md-inverse-on-surface);
+  --color-md-inverse-primary: var(--md-inverse-primary);
+
+  /* Scrim & Shadow */
+  --color-md-scrim: var(--md-scrim);
+  --color-md-shadow: var(--md-shadow);
+
+  /* MD3 Elevation (shadow) scale */
+  --shadow-md3-1: 0 1px 2px 0 rgba(0,0,0,0.3), 0 1px 3px 1px rgba(0,0,0,0.15);
+  --shadow-md3-2: 0 1px 2px 0 rgba(0,0,0,0.3), 0 2px 6px 2px rgba(0,0,0,0.15);
+  --shadow-md3-3: 0 1px 3px 0 rgba(0,0,0,0.3), 0 4px 8px 3px rgba(0,0,0,0.15);
+  --shadow-md3-4: 0 2px 3px 0 rgba(0,0,0,0.3), 0 6px 10px 4px rgba(0,0,0,0.15);
+  --shadow-md3-5: 0 4px 4px 0 rgba(0,0,0,0.3), 0 8px 12px 6px rgba(0,0,0,0.15);
+
+  /* MD3 Shape scale */
+  --radius-md3-xs: 4px;
+  --radius-md3-sm: 8px;
+  --radius-md3-md: 12px;
+  --radius-md3-lg: 16px;
+  --radius-md3-xl: 28px;
+  --radius-md3-full: 9999px;
+
+  /* Typography — Font families */
+  --font-sans: "Inter", "Roboto", system-ui, -apple-system, sans-serif;
+  --font-display: "Inter", system-ui, -apple-system, sans-serif;
+
+  /* MD3 Typescale — sizes */
+  --font-size-display-lg: 3.5625rem;   /* 57px */
+  --font-size-display-md: 2.8125rem;   /* 45px */
+  --font-size-display-sm: 2.25rem;     /* 36px */
+  --font-size-headline-lg: 2rem;       /* 32px */
+  --font-size-headline-md: 1.75rem;    /* 28px */
+  --font-size-headline-sm: 1.5rem;     /* 24px */
+  --font-size-title-lg: 1.375rem;      /* 22px */
+  --font-size-title-md: 1rem;          /* 16px */
+  --font-size-title-sm: 0.875rem;      /* 14px */
+  --font-size-body-lg: 1rem;           /* 16px */
+  --font-size-body-md: 0.875rem;       /* 14px */
+  --font-size-body-sm: 0.75rem;        /* 12px */
+  --font-size-label-lg: 0.875rem;      /* 14px */
+  --font-size-label-md: 0.75rem;       /* 12px */
+  --font-size-label-sm: 0.6875rem;     /* 11px */
+}
+
+/* ================================================================
+   Base Styles
+   ================================================================ */
+body {
+  background-color: var(--md-surface);
+  color: var(--md-on-surface);
+  font-family: var(--font-sans);
+}
+
+/* ================================================================
+   Focus Visible — Accessible focus ring using primary color
+   ================================================================ */
+:focus-visible {
+  outline: 2px solid var(--md-primary);
+  outline-offset: 2px;
+}
+
+/* ================================================================
+   Selection highlight — uses primary container colors
+   ================================================================ */
+::selection {
+  background-color: var(--md-primary-container);
+  color: var(--md-on-primary-container);
+}
