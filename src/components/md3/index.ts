@@ -3,3 +3,4 @@ export { Chip } from "./chip";
 export { Icon } from "./icon";
 export { Button } from "./button";
 export { Divider } from "./divider";
+export { TextField } from "./text-field";
